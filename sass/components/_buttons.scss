@@ -1,0 +1,74 @@
+.btn {
+  display: inline-block;
+
+  color: white;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+
+  &--big {
+    padding: 1.5rem 3.2rem;
+    font-size: 1.2rem;
+  }
+
+  &--small {
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  &--orange {
+    background-color: $color-primary;
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+  }
+
+  &--green {
+    background-color: $color-secondary;
+    &:hover {
+      background-color: $color-secondary-dark;
+    }
+  }
+
+  &--animated {
+    overflow: hidden;
+    position: relative;
+    z-index: 20;
+    transition: all 0.5s;
+
+    &:after {
+      background: $color-white;
+      opacity: 0.7;
+      content: "";
+      height: 155px;
+      left: -75px;
+      position: absolute;
+      top: -50px;
+      transform: rotate(35deg);
+      transition: all 0.5s ease-in-out;
+      width: 1.5rem;
+      z-index: -10;
+    }
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+      &:after {
+        left: 120%;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+
+  &--animated-popup {
+    animation-name: popup;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

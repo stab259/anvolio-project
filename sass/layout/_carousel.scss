@@ -1,0 +1,55 @@
+.carousels {
+  grid-column: full-start / full-end;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  column-gap: 1.5rem;
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+}
+
+.carousel {
+  width: 33%;
+  display: block;
+  padding: 15rem 1rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 100%;
+    padding: 40rem 1rem;
+  }
+
+  &--1 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-black, 0.5) 0%,
+        rgba($color-black, 0.5) 100%
+      ),
+      url(../../img/phi1.jpeg);
+    background-size: cover;
+    background-position: center;
+  }
+  &--2 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-black, 0.5) 0%,
+        rgba($color-black, 0.5) 100%
+      ),
+      url(../../img/phi2.jpeg);
+    background-size: cover;
+    background-position: center;
+  }
+  &--3 {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-black, 0.5) 0%,
+        rgba($color-black, 0.5) 100%
+      ),
+      url(../../img/phi3.jpeg);
+    background-size: cover;
+    background-position: center;
+  }
+}

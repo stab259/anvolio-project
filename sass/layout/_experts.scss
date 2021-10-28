@@ -1,0 +1,66 @@
+.experts {
+  grid-column: center-start / center-end;
+
+  margin: 7rem 10rem 10rem 10rem;
+
+  text-align: center;
+}
+
+.expert {
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 20rem;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__item {
+    margin-bottom: 3rem;
+  }
+
+  &__shape {
+    position: relative;
+    margin-bottom: 2rem;
+
+    width: 16rem;
+    height: 16rem;
+    clip-path: circle(50% at 50% 50%);
+  }
+  &__image {
+    width: 100%;
+    transition: all 0.5s;
+  }
+  &__caption {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid $color-secondary;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all 0.3s;
+    transition-delay: 0.3s;
+  }
+  &__icon {
+    position: relative;
+    transform: translateY(20%);
+    width: 100%;
+    height: 100%;
+    font-size: 5rem;
+    cursor: pointer;
+  }
+  &__item:hover &__caption {
+    opacity: 1;
+    transform: scale(1);
+  }
+  &__item:hover &__image {
+    filter: blur(0.1rem) brightness(50%);
+  }
+  &__intro {
+  }
+}

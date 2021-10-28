@@ -1,0 +1,100 @@
+body {
+  color: $color-white;
+
+  font-family: $font-primary;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.heading-primary {
+  display: block;
+  margin-bottom: 1rem;
+
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+.heading-secondary {
+  display: block;
+  margin-bottom: 1rem;
+
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+}
+
+.heading-tertiary {
+  display: block;
+  margin-bottom: 1rem;
+
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.heading-quaternary {
+  display: block;
+
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.heading-display {
+  display: block;
+  margin-bottom: 0.5rem;
+
+  text-transform: capitalize;
+  font-family: "Parisienne", cursive;
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+}
+
+.heading--center {
+  display: block;
+  text-align: center;
+}
+
+.paragraph {
+  display: block;
+  margin-bottom: 1rem;
+
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.text--small {
+  font-size: 1.2rem;
+}
+
+.text--medium {
+  font-size: 1.8rem;
+  letter-spacing: 0;
+}
+
+.text--primary {
+  color: $color-primary;
+}
+
+.text--secondary {
+  color: $color-secondary;
+}
+
+.text--grey-2 {
+  color: $color-grey-dark-2;
+}
+
+.text--grey-3 {
+  color: $color-grey-dark-3;
+}
+
+.text--grey-light-1 {
+  color: $color-grey-light-1;
+}
+
+.text--grey-light-2 {
+  color: $color-grey-light-2;
+}

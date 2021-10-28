@@ -1,0 +1,36 @@
+.features {
+  grid-column: center-start / center-end;
+
+  margin: 7rem 10rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  background-color: $color-grey-light-3;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (max-width: $bp-small) {
+    margin: 5rem 3rem;
+  }
+}
+
+.feature {
+  display: inline-block;
+
+  text-align: center;
+  &__image {
+    width: 100%;
+    display: block;
+  }
+  &__text {
+    padding: 2.5rem;
+  }
+  @media only screen and (max-width: $bp-large) {
+    &--3 {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+  }
+}

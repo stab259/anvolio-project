@@ -1,0 +1,76 @@
+.services {
+  grid-column: full-start / full-end;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.service {
+  position: relative;
+  overflow: hidden;
+  &__image-box {
+    width: 100%;
+  }
+  &__image {
+    width: 100%;
+    display: block;
+  }
+  &--hover {
+    &__icon-box {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-primary;
+      transform: scale(1.2);
+      transition: all 0.7s;
+      overflow: hidden;
+      background-color: rgba($color-black, 0.6);
+    }
+    &__icon {
+      font-size: 3rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:first-child {
+        margin-right: 2rem;
+      }
+    }
+    &__icon:hover {
+      transform: translateY(-1rem);
+    }
+    &__text-box {
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 20%;
+      background-color: $color-grey-dark-2;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      transition: all 0.7s;
+      transform: translateY(40%);
+    }
+    &__text-box * {
+      margin: 0;
+      letter-spacing: 0;
+    }
+  }
+  &:hover &--hover {
+    &__icon-box {
+      opacity: 1;
+      transform: scale(1);
+    }
+    &__text-box {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

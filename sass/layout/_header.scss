@@ -1,0 +1,145 @@
+.header {
+  grid-column: full-start / full-end;
+  position: relative;
+
+  background: linear-gradient(
+      to right,
+      rgba($color-black, 0.4) 0%,
+      rgba($color-black, 0.4) 100%
+    ),
+    url(../../img/hero.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-blend-mode: darken;
+
+  &__logo-box {
+    position: absolute;
+    top: 6rem;
+    left: 13%;
+  }
+
+  &__logo {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 10rem;
+    right: 13%;
+    display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+    }
+  }
+
+  &__nav-item {
+    position: relative;
+    display: block;
+    margin-left: 5rem;
+
+    color: $color-white;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    transition: all 0.4s;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 1.5rem;
+      text-align: right;
+      display: none;
+      z-index: 10;
+
+      &::after {
+        transform: translateX(1.5rem);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0.2rem;
+      bottom: -1rem;
+      margin: 0 auto;
+      left: -1rem;
+      right: -1rem;
+      width: 0;
+      background-color: $color-primary;
+      transition: all 0.4s;
+    }
+
+    &:hover {
+      color: $color-primary;
+      transform: translateY(-0.5rem);
+      &::after {
+        width: 6rem;
+      }
+    }
+  }
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+
+    text-align: center;
+  }
+}
+
+.nav {
+  &__checkbox {
+    display: none;
+  }
+  &__checkbox:checked ~ .header__nav-item {
+    display: block;
+  }
+  &__checkbox:checked + &__button {
+    top: -6rem;
+  }
+  &__button {
+    display: none;
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: block;
+    }
+  }
+  &__icon {
+    position: relative;
+    margin-top: 3.2rem;
+
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      width: 2rem;
+      height: 0.2rem;
+      background-color: $color-white;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.statistics {
+  grid-column: full-start / full-end;
+
+  background-color: $color-secondary;
+
+  display: grid;
+  padding: 7rem 20% 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  @media only screen and (max-width: $bp-large) {
+    padding: 5rem;
+  }
+}
+
+.statistic {
+  padding-bottom: 1rem;
+  &__image {
+    width: 5rem;
+  }
+  &__number {
+    margin-top: -1rem;
+    display: block;
+    font-size: 4.5rem;
+    font-weight: 400;
+  }
+  &__text {
+    margin-top: -1rem;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}

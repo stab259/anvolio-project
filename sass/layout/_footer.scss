@@ -1,0 +1,51 @@
+.footer {
+  grid-column: full-start / full-end;
+
+  background-color: $color-grey-dark-1;
+  padding: 6rem 15rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-large) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 5rem;
+  }
+
+  &__column {
+  }
+  &__logo-box {
+    width: 20rem;
+  }
+  &__logo {
+    display: block;
+    width: 100%;
+  }
+  &__contact {
+    display: flex;
+    letter-spacing: 0.1rem;
+    @media only screen and (max-width: $bp-large) {
+      justify-content: center;
+    }
+  }
+  &__icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+  &__project {
+    margin-top: 2rem;
+    &--name {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+    &--intro {
+      font-size: 1.2rem;
+    }
+  }
+}
