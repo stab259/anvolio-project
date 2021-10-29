@@ -192,15 +192,15 @@ body {
       width: 100%;
       padding: 40rem 1rem; } }
   .carousel--1 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../../img/phi1.jpeg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("../img/phi1.jpeg");
     background-size: cover;
     background-position: center; }
   .carousel--2 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../../img/phi2.jpeg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("../img/phi2.jpeg");
     background-size: cover;
     background-position: center; }
   .carousel--3 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../../img/phi3.jpeg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("../img/phi3.jpeg");
     background-size: cover;
     background-position: center; }
 
@@ -361,7 +361,7 @@ body {
 .header {
   grid-column: full-start / full-end;
   position: relative;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../../img/hero.jpg);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../img/hero.jpg");
   background-size: cover;
   background-position: 50% 50%;
   background-blend-mode: darken; }
@@ -662,7 +662,7 @@ body {
 .testimonials {
   grid-column: full-start / full-end;
   height: 50rem;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../../img/testimonial.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/testimonial.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
